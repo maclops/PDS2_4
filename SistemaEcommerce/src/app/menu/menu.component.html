@@ -1,28 +1,34 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-              <a class="nav-link" routerLink="home">Sistema Ecommerce <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-              <a routerLink="home" class="nav-link">
-                  <img src="../../assets/img/home.png" alt="Home" width="32px" class="img-fluid">
-              </a>
-          </li>
-          <li class="nav-item">
-              <a routerLink="clientes" class="nav-link">Cliente</a>
-          </li>
-          <li class="nav-item">
-              <a routerLink="cds" class="nav-link">Cd's</a>
-          </li>
-          <li class="nav-item">
-              <a routerLink="filmes" class="nav-link">Filmes</a>
-          </li>
-          <li class="nav-item">
-              <a routerLink="livros" class="nav-link">Livros</a>
-          </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="home">Sistema Ecommerce <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="home" class="nav-link">
+                    <img src="../../assets/img/home.png" alt="Home" width="32px" class="img-fluid">
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="showNavBar">
+                <a routerLink="clientes" class="nav-link">Cliente</a>
+            </li>
+            <li class="nav-item" *ngIf="showNavBar">
+                <a routerLink="cds" class="nav-link">Cd's</a>
+            </li>
+            <li class="nav-item" *ngIf="showNavBar">
+                <a routerLink="filmes" class="nav-link">Filmes</a>
+            </li>
+            <li class="nav-item" *ngIf="showNavBar">
+                <a routerLink="livros" class="nav-link">Livros</a>
+            </li>
 
-          <!-- <li class="nav-item dropdown">
+            <li class="nav_item active" *ngIf="!isAuth()">
+                <a class="nav-link" routerLink="signin">Login</a>
+            </li>
+            <li class="nav_item active" *ngIf="isAuth()">
+                <a class="nav-link" (click)="onLogout()">Logout</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
                   Acessos
@@ -38,7 +44,7 @@
               </div>
           </li> -->
 
-          <!-- <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
                   Cadastros
@@ -52,6 +58,6 @@
               </div>
           </li> -->
 
-      </ul>
-  </div>
+        </ul>
+    </div>
 </nav>

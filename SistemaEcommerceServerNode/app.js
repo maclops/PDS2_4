@@ -20,8 +20,14 @@ app.set('json spaces', 4);
 
 const index = require('./routes/index');
 const clientes = require('./routes/clientes');
+const cds = require('./routes/cds');
+const filmes = require('./routes/filmes');
+const livros = require('./routes/livros');
 
 app.use('/', index);
 app.use('/clientes', clientes);
+app.use('/cds', cds);
+app.use('/filmes', filmes);
+app.use('/livros', livros);
 
 app.listen(port, () => console.log('Up on port '+port));

@@ -1,21 +1,21 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
-const Cliente = db.define('cliente', {
+const Cd = db.define('cd', {
     codigo: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    nome: {
+    artista: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    cargo: {
+    album: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    endereco: {
+    ano: {
         type: Sequelize.STRING,
         allowNull: false
     },
@@ -27,4 +27,4 @@ const Cliente = db.define('cliente', {
     }
 });
 
-module.exports = Cliente;
+module.exports = Cd;

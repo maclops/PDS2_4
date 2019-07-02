@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
-const Cliente = db.define('cliente', {
+const Filme = db.define('filme', {
     codigo: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -11,11 +11,11 @@ const Cliente = db.define('cliente', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    cargo: {
+    genero: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    endereco: {
+    ano: {
         type: Sequelize.STRING,
         allowNull: false
     },
@@ -27,4 +27,4 @@ const Cliente = db.define('cliente', {
     }
 });
 
-module.exports = Cliente;
+module.exports = Filme;

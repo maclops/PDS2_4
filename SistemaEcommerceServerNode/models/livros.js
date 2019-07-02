@@ -1,21 +1,25 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
-const Cliente = db.define('cliente', {
+const Livro = db.define('livro', {
     codigo: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    nome: {
+    obra: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    cargo: {
+    autor: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    endereco: {
+    genero: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    isbn: {
         type: Sequelize.STRING,
         allowNull: false
     },
@@ -27,4 +31,4 @@ const Cliente = db.define('cliente', {
     }
 });
 
-module.exports = Cliente;
+module.exports = Livro;

@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch'
 @Injectable()
 export class CdsService {
 
-  private url: string = 'http://localhost:8080/cds'
+  private url: string = 'http://localhost:3000/cds'
 
   cdsChanged = new EventEmitter<Observable<Cd[]>>()
 

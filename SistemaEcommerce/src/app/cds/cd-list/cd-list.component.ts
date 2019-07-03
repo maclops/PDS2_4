@@ -14,10 +14,8 @@ export class CdListComponent implements OnInit {
 
   ngOnInit() {
     this.cdService.getAll()
-    .subscribe(data => this.cds = data, err => {
-      alert('Aconteceu um erro!')
-    })
-
+      .subscribe(data => this.cds = data,
+        err => alert('Aconteceu um erro!'))
     this.cdService.cdsChanged.subscribe(
       (observable: any) => observable.subscribe(
         data => this.cds = data

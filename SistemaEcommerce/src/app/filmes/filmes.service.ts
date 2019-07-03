@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch'
 @Injectable()
 export class FilmesService {
 
-  private url: string = 'http://localhost:8080/filmes'
+  private url: string = 'http://localhost:3000/filmes'
 
   filmesChanged = new EventEmitter<Observable<Filme[]>>()
 
